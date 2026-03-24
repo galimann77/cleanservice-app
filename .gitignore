@@ -1,0 +1,71 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+venv/
+.env
+.DS_Store
+
+# Streamlit
+.streamlit/secrets.toml
+
+# Logs
+*.log
+
+# Marketing Assets (Large files)
+_marketing_kit/
+
+# Data
+data/*.db
+data/uploads/
+
+# === MIGRATION SAFETY: Private Daten niemals tracken ===
+# Mac System Files
+.zsh_history
+.zprofile
+.zshrc
+.bash_history
+.bash_profile
+.CFUserTextEncoding
+.Trash/
+
+# Media (niemals in Git)
+*.wav
+*.mp3
+*.mp4
+*.mov
+*.avi
+*.mkv
+*.flac
+*.aac
+*.ogg
+*.m4a
+*.jpg
+*.jpeg
+*.png
+*.gif
+*.bmp
+*.tiff
+*.raw
+*.heic
+
+# Mac System Ordner
+Music/
+Pictures/
+Videos/
+Desktop/
+Documents/
+Downloads/
+Movies/
+.config/
+.docker/
+.local/
+
+# IDE & Editor
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Cleanup Scripts
+CLEANUP_*.sh

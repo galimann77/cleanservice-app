@@ -1,0 +1,233 @@
+/* === CLEANCALCULATOR PRO: PROFESSIONAL SAAS THEME === */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+:root {
+    /* Brand Colors */
+    --primary: #2563EB;
+    /* Royal Blue */
+    --primary-dark: #1E40AF;
+    /* Navy Blue */
+    --secondary: #0F172A;
+    /* Slate 900 (Sidebar) */
+    --accent: #38BDF8;
+    /* Cyan (Highlights) */
+
+    /* Backgrounds */
+    --bg-body: #F1F5F9;
+    /* Slate 100 (Light Gray) */
+    --bg-card: #FFFFFF;
+    /* Pure White */
+    --bg-sidebar: #0F172A;
+    /* Dark Sidebar */
+
+    /* Text */
+    --text-main: #0F172A;
+    /* Darkest Slate */
+    --text-muted: #64748B;
+    /* Medium Slate */
+    --text-on-dark: #F8FAFC;
+    /* White-ish */
+
+    /* UI Elements */
+    --radius: 12px;
+    --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+/* === 1. GLOBAL SETTINGS === */
+.stApp {
+    background-color: var(--bg-body);
+    font-family: 'Inter', sans-serif !important;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: var(--text-main) !important;
+    font-weight: 700 !important;
+    letter-spacing: -0.02em;
+}
+
+h1 {
+    font-size: 2.5rem !important;
+    margin-bottom: 1rem !important;
+}
+
+h2 {
+    font-size: 1.75rem !important;
+    color: var(--primary-dark) !important;
+}
+
+p,
+.stMarkdown,
+.stText,
+label {
+    color: var(--text-main) !important;
+    line-height: 1.6;
+}
+
+/* === 2. SIDEBAR (Dark & Professional) === */
+[data-testid="stSidebar"] {
+    background-color: var(--bg-sidebar) !important;
+    border-right: 1px solid #334155;
+}
+
+[data-testid="stSidebar"] h1,
+[data-testid="stSidebar"] h2,
+[data-testid="stSidebar"] h3,
+[data-testid="stSidebar"] p,
+[data-testid="stSidebar"] span,
+[data-testid="stSidebar"] label {
+    color: var(--text-on-dark) !important;
+}
+
+/* Sidebar Logo Area */
+.sidebar-header {
+    padding: 20px 0;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #334155;
+}
+
+/* Navigation items */
+.stRadio>div>label {
+    background-color: transparent !important;
+    color: #CBD5E1 !important;
+    /* Light Gray */
+    padding: 12px 16px !important;
+    border-radius: 8px !important;
+    transition: all 0.2s;
+}
+
+.stRadio>div>label:hover {
+    background-color: rgba(255, 255, 255, 0.1) !important;
+    color: white !important;
+}
+
+.stRadio>div>label[data-checked="true"] {
+    background: linear-gradient(90deg, var(--primary) 0%, var(--primary-dark) 100%) !important;
+    color: white !important;
+    font-weight: 600 !important;
+    box-shadow: 0 4px 12px rgba(37, 99, 235, 0.4);
+}
+
+/* === 3. CARDS & CONTAINERS === */
+div[data-testid="stVerticalBlock"]>div[style*="background-color"],
+.stCard,
+[data-testid="stExpander"] {
+    background-color: var(--bg-card) !important;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    border: 1px solid #E2E8F0;
+    /* Slate 200 */
+    padding: 24px !important;
+    margin-bottom: 16px;
+}
+
+/* === 4. INPUT FIELDS (High Contrast) === */
+.stTextInput input,
+.stNumberInput input,
+.stSelectbox div[data-baseweb="select"] {
+    background-color: #FFFFFF !important;
+    color: var(--text-main) !important;
+    border: 2px solid #CBD5E1 !important;
+    border-radius: 8px !important;
+    height: 48px;
+    font-size: 1rem;
+}
+
+.stTextInput input:focus,
+.stNumberInput input:focus,
+.stSelectbox div[data-baseweb="select"]:focus-within {
+    border-color: var(--primary) !important;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.2) !important;
+}
+
+/* Labels */
+.stTextInput label,
+.stNumberInput label,
+.stSelectbox label {
+    font-weight: 600 !important;
+    color: var(--text-main) !important;
+    margin-bottom: 6px !important;
+}
+
+/* === 5. BUTTONS (Modern Gradient) === */
+div.stButton>button {
+    background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%) !important;
+    color: white !important;
+    border: none !important;
+    border-radius: 8px !important;
+    padding: 14px 28px !important;
+    font-weight: 600 !important;
+    letter-spacing: 0.02em;
+    box-shadow: var(--shadow);
+    transition: transform 0.1s, box-shadow 0.1s;
+}
+
+div.stButton>button:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-lg);
+}
+
+div.stButton>button:active {
+    transform: translateY(0);
+}
+
+/* Secondary Actions */
+button[kind="secondary"] {
+    background: white !important;
+    border: 2px solid #E2E8F0 !important;
+    color: var(--text-main) !important;
+}
+
+/* === 6. METRIC CARDS === */
+.metric-card {
+    background: white;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: var(--shadow);
+    border-left: 4px solid var(--primary);
+}
+
+.metric-value {
+    color: var(--text-main);
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.metric-label {
+    color: var(--text-muted);
+    font-size: 0.875rem;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+/* === 7. MOBILE OPTIMIZATIONS === */
+@media (max-width: 768px) {
+    .stApp {
+        padding-top: 60px;
+        /* Space for mobile header if needed */
+    }
+
+    [data-testid="stSidebar"] {
+        background-color: var(--bg-sidebar) !important;
+        /* Ensure it overlays correctly on mobile */
+    }
+
+    h1 {
+        font-size: 1.75rem !important;
+    }
+
+    h2 {
+        font-size: 1.5rem !important;
+    }
+
+    div.stButton>button {
+        width: 100%;
+        margin-top: 8px;
+    }
+}
